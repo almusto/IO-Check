@@ -27,11 +27,11 @@ import Foundation
 
 struct Season: Codable {
     let name: String
-    let scores: Scores
+    let scores: Score
 }
 
 
-struct Scores: Codable {
+struct Score: Codable {
     let all: Double
     let dps: Double
     let healer: Double

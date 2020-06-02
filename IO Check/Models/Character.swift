@@ -47,9 +47,11 @@ struct Character: Codable {
     let race: String
     let `class`: String
     let faction: String
-    let thumbnail_url: String
+    var thumbnail_url: String
     let region: String
     let realm: String
-    let mythic_plus_score_by_seaon: [Season]
-    let mythic_plus_ranks: [String:Rank]
+    //let mythic_plus_score_by_seaon: [Season]
+    //let mythic_plus_ranks: [String:Rank]
 }
+
+
