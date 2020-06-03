@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 /*
  {
@@ -38,6 +39,11 @@ import Foundation
              "region": 16,
              "realm": 3
          },
+ 
+ "guild": {
+     "name": "Dinosaur Cowboys",
+     "realm": "Area 52"
+ }
 
 */
 
@@ -50,6 +56,12 @@ struct Character: Codable {
     var thumbnail_url: String
     let region: String
     let realm: String
+    let guild: Guild?
+    
+    var classColor: Color {
+        return ClassColor(rawValue: `class`)?.color ?? .white
+        
+    }
     //let mythic_plus_score_by_seaon: [Season]
     //let mythic_plus_ranks: [String:Rank]
 }

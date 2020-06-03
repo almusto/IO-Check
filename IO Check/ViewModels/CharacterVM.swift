@@ -15,7 +15,7 @@ class CharacterVM: ObservableObject {
     
     private var webservice: Webservice
     @Published var character: Character?
-    var name: String! = "luigisama"
+    var name: String! = "luigidh"
     var region: String! = "us"
     var realm: String! = "area-52"
     

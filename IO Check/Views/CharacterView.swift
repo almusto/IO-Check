@@ -17,12 +17,51 @@ struct CharacterView: View {
     }
     
     var body: some View {
-       return VStack {
-        Text(self.characterVM.character?.class ?? "")
-        ImageView(urlString: self.characterVM.character?.thumbnail_url)
-            .aspectRatio(contentMode: .fit)
-
+        
+        VStack {
+        CharacterHeaderView(character: self.characterVM.character ?? Character(name: "", race: "", class: "", faction: "", thumbnail_url: "", region: "", realm: "", guild: Guild(name: "", realm: "")))
+            Spacer()
         }
+    }
+}
+
+
+struct CharacterHeaderView: View {
+    
+    let character: Character?
+    
+    init(character: Character) {
+        self.character = character
+    }
+    
+    var body: some View {
+        
+        HStack(alignment: .top) {
+            VStack(alignment: .center) {
+                ImageView(urlString: self.character?.thumbnail_url)
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(40)
+                    .padding(.top)
+                Text(self.character?.name ?? "")
+                    .foregroundColor(.red)
+                    .font(.title)
+                Text(String(format: "<%@>", self.character?.guild?.name ?? ""))
+                    .foregroundColor(.white)
+                    .padding(.leading)
+                HStack {
+                    Text(self.character?.race ?? "")
+                        .foregroundColor(.red)
+                    Text(self.character?.class ?? "")
+                        .foregroundColor(self.character?.classColor ?? .white)
+                }.padding(.leading)
+            }.padding(.bottom)
+            
+            Text("IO SCORE")
+            Spacer()
+
+        }.background(Color.gray)
+        
+
     }
 }
 
