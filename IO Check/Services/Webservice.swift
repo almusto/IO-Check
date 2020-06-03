@@ -32,7 +32,7 @@ extension Webservice {
             URLQueryItem(name: "name", value: name),
             URLQueryItem(name: "region", value: region),
             URLQueryItem(name: "realm", value: realm),
-            URLQueryItem(name: "fields", value: "guild,gear,mythic_plus_ranks")
+            URLQueryItem(name: "fields", value: "guild,gear,mythic_plus_ranks,mythic_plus_scores_by_season:current")
         ]
         //mythic_plus_scores_by_season:current
         
@@ -58,12 +58,15 @@ extension Webservice {
                 }
                 return
             }
-            
-            let character = try? JSONDecoder().decode(Character.self, from: data)
+            //let jsonDict = try? JSONSerialization.jsonObject(with: data, options: []) as! [String:Any]
+            //let string = ""
+            let character = try! JSONDecoder().decode(Character.self, from: data)
             DispatchQueue.main.async {
                 completion(character)
 
             }
+            
+
             
         }.resume()
         

@@ -57,13 +57,17 @@ struct Character: Codable {
     let region: String
     let realm: String
     let guild: Guild?
+    let mythic_plus_scores_by_season: [Season]
+    //let mythic_plus_ranks: [String:Rank]
+    
     
     var classColor: Color {
         return ClassColor(rawValue: `class`)?.color ?? .white
-        
     }
-    //let mythic_plus_score_by_seaon: [Season]
-    //let mythic_plus_ranks: [String:Rank]
+    
+    var isHorde: Bool {
+        return faction.lowercased() == "horde" ? true : false
+    }
 }
 
 

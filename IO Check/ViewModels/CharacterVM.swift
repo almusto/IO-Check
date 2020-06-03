@@ -15,7 +15,7 @@ class CharacterVM: ObservableObject {
     
     private var webservice: Webservice
     @Published var character: Character?
-    var name: String! = "luigidh"
+    var name: String! = "luigisama"
     var region: String! = "us"
     var realm: String! = "area-52"
     
@@ -31,6 +31,11 @@ class CharacterVM: ObservableObject {
                 self.character = char
             }
         }
+    }
+    
+    func validateSeasons() -> Bool {
+        return (self.character?.mythic_plus_scores_by_season.count) ?? 0 > 0 ? true : false
+
     }
     
 

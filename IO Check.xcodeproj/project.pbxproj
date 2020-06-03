@@ -19,7 +19,7 @@
 		AA3907082486A46400AA3E5B /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907072486A46400AA3E5B /* ImageLoader.swift */; };
 		AA39070A2486A4C100AA3E5B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907092486A4C100AA3E5B /* ImageView.swift */; };
 		AA39070C2487EC1000AA3E5B /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39070B2487EC1000AA3E5B /* Guild.swift */; };
-		AA39070E2487F69100AA3E5B /* ClassColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39070D2487F69100AA3E5B /* ClassColor.swift */; };
+		AA39070E2487F69100AA3E5B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39070D2487F69100AA3E5B /* Enums.swift */; };
 		AA4A1D402483F91F003A1AB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D3F2483F91F003A1AB6 /* AppDelegate.swift */; };
 		AA4A1D422483F91F003A1AB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D412483F91F003A1AB6 /* SceneDelegate.swift */; };
 		AA4A1D442483F91F003A1AB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D432483F91F003A1AB6 /* ContentView.swift */; };
@@ -60,7 +60,7 @@
 		AA3907072486A46400AA3E5B /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		AA3907092486A4C100AA3E5B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		AA39070B2487EC1000AA3E5B /* Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guild.swift; sourceTree = "<group>"; };
-		AA39070D2487F69100AA3E5B /* ClassColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassColor.swift; sourceTree = "<group>"; };
+		AA39070D2487F69100AA3E5B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		AA4A1D3C2483F91F003A1AB6 /* IO Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IO Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4A1D3F2483F91F003A1AB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA4A1D412483F91F003A1AB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 				AA34AE1D2485866E00B8CD53 /* Item.swift */,
 				AA34AE23248588BD00B8CD53 /* Corruption.swift */,
 				AA39070B2487EC1000AA3E5B /* Guild.swift */,
-				AA39070D2487F69100AA3E5B /* ClassColor.swift */,
+				AA39070D2487F69100AA3E5B /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,7 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA39070E2487F69100AA3E5B /* ClassColor.swift in Sources */,
+				AA39070E2487F69100AA3E5B /* Enums.swift in Sources */,
 				AA34AE24248588BD00B8CD53 /* Corruption.swift in Sources */,
 				AA34AE222485889B00B8CD53 /* Gear.swift in Sources */,
 				AA4A1D402483F91F003A1AB6 /* AppDelegate.swift in Sources */,

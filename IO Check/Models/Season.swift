@@ -24,10 +24,15 @@
  */
 
 import Foundation
+import SwiftUI
 
 struct Season: Codable {
-    let name: String
+    let season: String
     let scores: Score
+    
+    var seasonName: String {
+        return SeasonName(rawValue: season)?.formatedSeasonName ?? ""
+    }
 }
 
 

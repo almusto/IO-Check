@@ -19,7 +19,7 @@ struct CharacterView: View {
     var body: some View {
         
         VStack {
-        CharacterHeaderView(character: self.characterVM.character ?? Character(name: "", race: "", class: "", faction: "", thumbnail_url: "", region: "", realm: "", guild: Guild(name: "", realm: "")))
+            CharacterHeaderView(characterVM: self.characterVM)
             Spacer()
         }
     }
@@ -28,39 +28,47 @@ struct CharacterView: View {
 
 struct CharacterHeaderView: View {
     
-    let character: Character?
+    @ObservedObject var characterVM: CharacterVM
     
-    init(character: Character) {
-        self.character = character
+    init(characterVM: CharacterVM) {
+        self.characterVM = characterVM
     }
     
     var body: some View {
         
-        HStack(alignment: .top) {
+
             VStack(alignment: .center) {
-                ImageView(urlString: self.character?.thumbnail_url)
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(40)
-                    .padding(.top)
-                Text(self.character?.name ?? "")
-                    .foregroundColor(.red)
-                    .font(.title)
-                Text(String(format: "<%@>", self.character?.guild?.name ?? ""))
+                HStack(alignment: .top) {
+                    ImageView(urlString: self.characterVM.character?.thumbnail_url)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(40)
+                        .padding()
+                    VStack(alignment: .center) {
+                        Text(self.characterVM.validateSeasons() ? self.characterVM.character?.mythic_plus_scores_by_season[0].seasonName ?? "" : "")
+                                .padding()
+                        .foregroundColor(.white)
+
+                        Text(self.characterVM.validateSeasons() ? String(format: "%.0f" , self.characterVM.character?.mythic_plus_scores_by_season[0].scores.all ?? 0) : "")
+                            .foregroundColor(.white)
+                    }.padding()
+                }
+                .frame(maxWidth: .infinity, maxHeight: .some(200))
+
+                Text(self.characterVM.character?.name ?? "")
+                    .foregroundColor(self.characterVM.character?.isHorde ?? true ? .red : .blue)
+                    .font(.title).bold()
+                Text(String(format: "<%@>", self.characterVM.character?.guild?.name ?? ""))
                     .foregroundColor(.white)
                     .padding(.leading)
                 HStack {
-                    Text(self.character?.race ?? "")
-                        .foregroundColor(.red)
-                    Text(self.character?.class ?? "")
-                        .foregroundColor(self.character?.classColor ?? .white)
+                    Text(self.characterVM.character?.race ?? "")
+                        .foregroundColor(self.characterVM.character?.isHorde ?? true ? .red : .blue)
+                    Text(self.characterVM.character?.class ?? "")
+                        .foregroundColor(self.characterVM.character?.classColor ?? .white)
                 }.padding(.leading)
-            }.padding(.bottom)
-            
-            Text("IO SCORE")
-            Spacer()
-
-        }.background(Color.gray)
-        
+            }.padding()
+                .background(Color(red: 53/255, green: 53/255, blue: 53/255))
+            .frame(maxWidth: .infinity, maxHeight: .some(200))
 
     }
 }

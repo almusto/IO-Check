@@ -1,15 +1,9 @@
-//
-//  ClassColor.swift
-//  IO Check
-//
-//  Created by sandro on 6/3/20.
-//  Copyright © 2020 sandro. All rights reserved.
-//
+
 
 import Foundation
 import SwiftUI
 
-
+//MARK: ClassColor
 enum ClassColor: String {
     case deathKnight = "Death Knight",
     demonHunter = "Demon Hunter",
@@ -52,4 +46,30 @@ enum ClassColor: String {
             return Color(red: 199/255, green: 156/255, blue: 110/255)
         }
     }
+}
+
+
+//MARK: SeasonName
+
+enum SeasonName: String {
+    case bfaSeasonOne = "season-bfa-1",
+    bfaSeasonTwo = "season-bfa-2",
+    bfaSeasonThree = "season-bfa-3",
+    bfaSeasonFour = "season-bfa-4"
+    
+    
+    var formatedSeasonName: String {
+        switch self {
+        case .bfaSeasonOne:
+            return "BFA Season 1"
+        case .bfaSeasonTwo:
+            return "BFA Season 2"
+        case .bfaSeasonThree:
+            return "BFA Season 3"
+        case .bfaSeasonFour:
+            return "BFA Season 4"
+
+        }
+    }
+
 }
