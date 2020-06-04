@@ -73,3 +73,48 @@ enum SeasonName: String {
     }
 
 }
+
+enum shortHandDungeon: String {
+    case junkyard = "Mechagon Junkyard",
+    workshop = "Mechagon Workshop",
+    freehold = "Freehold",
+    shrine = "Shrine of the Storm",
+    siege = "Siege of Boralus",
+    underrot = "The Underrot",
+    waycrest = "Waycrest Manor",
+    temple = "Temple of Sethraliss",
+    atal = "Atal'dazar",
+    kr = "Kings' Rest",
+    motherload = "The MOTHERLODE!!",
+    td = "Tol Dagor"
+    
+    
+    var shorthand: String {
+        switch self {
+        case .junkyard:
+            return "Junkyard"
+        case . workshop:
+            return "Workshop"
+        case .freehold:
+            return "Freehold"
+        case .shrine:
+            return "Shrine"
+        case .siege:
+            return "Siege"
+        case .underrot:
+            return "Underrot"
+        case .waycrest:
+            return "Waycrest"
+        case .temple:
+            return "Temple"
+        case .atal:
+            return "Atal"
+        case .kr:
+            return "KR"
+        case .motherload:
+            return "Molo"
+        case .td:
+            return "TD"
+        }
+    }
+}

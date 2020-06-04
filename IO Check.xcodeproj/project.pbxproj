@@ -20,6 +20,10 @@
 		AA39070A2486A4C100AA3E5B /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907092486A4C100AA3E5B /* ImageView.swift */; };
 		AA39070C2487EC1000AA3E5B /* Guild.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39070B2487EC1000AA3E5B /* Guild.swift */; };
 		AA39070E2487F69100AA3E5B /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39070D2487F69100AA3E5B /* Enums.swift */; };
+		AA3907122489354000AA3E5B /* CharacterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907112489354000AA3E5B /* CharacterHeaderView.swift */; };
+		AA3907162489365400AA3E5B /* RunListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907152489365400AA3E5B /* RunListView.swift */; };
+		AA3907182489377800AA3E5B /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3907172489377800AA3E5B /* Dungeon.swift */; };
+		AA39071A248937AA00AA3E5B /* Affix.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA390719248937AA00AA3E5B /* Affix.swift */; };
 		AA4A1D402483F91F003A1AB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D3F2483F91F003A1AB6 /* AppDelegate.swift */; };
 		AA4A1D422483F91F003A1AB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D412483F91F003A1AB6 /* SceneDelegate.swift */; };
 		AA4A1D442483F91F003A1AB6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4A1D432483F91F003A1AB6 /* ContentView.swift */; };
@@ -61,6 +65,10 @@
 		AA3907092486A4C100AA3E5B /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		AA39070B2487EC1000AA3E5B /* Guild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guild.swift; sourceTree = "<group>"; };
 		AA39070D2487F69100AA3E5B /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		AA3907112489354000AA3E5B /* CharacterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterHeaderView.swift; sourceTree = "<group>"; };
+		AA3907152489365400AA3E5B /* RunListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunListView.swift; sourceTree = "<group>"; };
+		AA3907172489377800AA3E5B /* Dungeon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
+		AA390719248937AA00AA3E5B /* Affix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affix.swift; sourceTree = "<group>"; };
 		AA4A1D3C2483F91F003A1AB6 /* IO Check.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IO Check.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA4A1D3F2483F91F003A1AB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA4A1D412483F91F003A1AB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +115,8 @@
 			children = (
 				AA39070524869C7700AA3E5B /* CharacterView.swift */,
 				AA3907092486A4C100AA3E5B /* ImageView.swift */,
+				AA3907112489354000AA3E5B /* CharacterHeaderView.swift */,
+				AA3907152489365400AA3E5B /* RunListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +132,8 @@
 				AA34AE23248588BD00B8CD53 /* Corruption.swift */,
 				AA39070B2487EC1000AA3E5B /* Guild.swift */,
 				AA39070D2487F69100AA3E5B /* Enums.swift */,
+				AA3907172489377800AA3E5B /* Dungeon.swift */,
+				AA390719248937AA00AA3E5B /* Affix.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -342,17 +354,21 @@
 				AA34AE24248588BD00B8CD53 /* Corruption.swift in Sources */,
 				AA34AE222485889B00B8CD53 /* Gear.swift in Sources */,
 				AA4A1D402483F91F003A1AB6 /* AppDelegate.swift in Sources */,
+				AA39071A248937AA00AA3E5B /* Affix.swift in Sources */,
 				AA34AE1E2485866E00B8CD53 /* Item.swift in Sources */,
 				AA4A1D422483F91F003A1AB6 /* SceneDelegate.swift in Sources */,
+				AA3907162489365400AA3E5B /* RunListView.swift in Sources */,
 				AA39070C2487EC1000AA3E5B /* Guild.swift in Sources */,
 				AA4A1D442483F91F003A1AB6 /* ContentView.swift in Sources */,
 				AA39070624869C7700AA3E5B /* CharacterView.swift in Sources */,
 				AA39070424869C6600AA3E5B /* CharacterVM.swift in Sources */,
 				AA34AE2624858DEB00B8CD53 /* Rank.swift in Sources */,
 				AA34AE202485884700B8CD53 /* Season.swift in Sources */,
+				AA3907122489354000AA3E5B /* CharacterHeaderView.swift in Sources */,
 				AA3907022486905700AA3E5B /* Webservice.swift in Sources */,
 				AA34AE1C2485803400B8CD53 /* Character.swift in Sources */,
 				AA39070A2486A4C100AA3E5B /* ImageView.swift in Sources */,
+				AA3907182489377800AA3E5B /* Dungeon.swift in Sources */,
 				AA3907082486A46400AA3E5B /* ImageLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,9 +32,9 @@ extension Webservice {
             URLQueryItem(name: "name", value: name),
             URLQueryItem(name: "region", value: region),
             URLQueryItem(name: "realm", value: realm),
-            URLQueryItem(name: "fields", value: "guild,gear,mythic_plus_ranks,mythic_plus_scores_by_season:current")
+            URLQueryItem(name: "fields", value:
+                "guild,gear,mythic_plus_ranks,mythic_plus_scores_by_season:current,mythic_plus_best_runs:all")
         ]
-        //mythic_plus_scores_by_season:current
         
         urlComponents.queryItems = urlItems
         

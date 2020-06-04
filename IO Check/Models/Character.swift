@@ -44,6 +44,24 @@ import SwiftUI
      "name": "Dinosaur Cowboys",
      "realm": "Area 52"
  }
+ 
+ "mythic_plus_best_runs": [
+     {
+         "dungeon": "Mechagon Junkyard",
+         "short_name": "YARD",
+         "mythic_level": 25,
+         "completed_at": "2020-05-17T01:19:41.000Z",
+         "clear_time_ms": 2025346,
+         "num_keystone_upgrades": 1,
+         "map_challenge_mode_id": 369,
+         "score": 421.6,
+         "affixes": [
+             {
+                 "id": 10,
+                 "name": "Fortified",
+                 "description": "Non-boss enemies have 20% more health and inflict up to 30% increased damage.",
+                 "wowhead_url": "https://wowhead.com/affix=10"
+             },
 
 */
 
@@ -58,6 +76,7 @@ struct Character: Codable {
     let realm: String
     let guild: Guild?
     let mythic_plus_scores_by_season: [Season]
+    let mythic_plus_best_runs: [Dungeon]
     //let mythic_plus_ranks: [String:Rank]
     
     
