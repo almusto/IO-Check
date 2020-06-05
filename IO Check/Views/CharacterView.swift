@@ -23,6 +23,7 @@ struct CharacterView: View {
             HStack {
                 Text("Dungeon")
                     .frame(maxWidth: .infinity)
+                    .padding(.leading)
                     .foregroundColor(.white)
                 Text("Level")
                     .frame(maxWidth: .infinity)
@@ -30,8 +31,11 @@ struct CharacterView: View {
                 Text("Time")
                     .frame(maxWidth: .infinity)
                     .foregroundColor(.white)
+                    .padding(.trailing)
+
                 Text("Score")
                     .frame(maxWidth: .infinity, minHeight: 50)
+                    .padding(.trailing)
                     .foregroundColor(.white)
             }.background(Color.black)
                 .frame(maxWidth: .infinity)
