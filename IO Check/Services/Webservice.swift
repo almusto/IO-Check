@@ -28,6 +28,7 @@ extension Webservice {
             }
             return
         }
+        
         let urlItems: [URLQueryItem] = [
             URLQueryItem(name: "name", value: name),
             URLQueryItem(name: "region", value: region),
@@ -37,7 +38,6 @@ extension Webservice {
         ]
         
         urlComponents.queryItems = urlItems
-        
         
         guard let url = urlComponents.url else {
             DispatchQueue.main.async {
@@ -49,7 +49,6 @@ extension Webservice {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
 
-        
         URLSession.shared.dataTask(with: urlRequest) { data, reponse, error in
             
             guard let data = data, error == nil else {
@@ -66,11 +65,56 @@ extension Webservice {
 
             }
             
+        }.resume()
+    }
+    
+    func getBestMythicRunByDungeon(season: String, region: String, dungeon: String, affixes: String, completion: @escaping (String?) -> ()) {
+        
+        let urlString = baseURLString + "mythic-plus/runs"
+        
+        guard var urlComponents = URLComponents(string: urlString) else {
+            DispatchQueue.main.async {
+                completion(nil)
+            }
+            return
+        }
+        
+        let urlItems: [URLQueryItem] = [
+            URLQueryItem(name: "season", value: season),
+            URLQueryItem(name: "region", value: region),
+            URLQueryItem(name: "dungeon", value: dungeon),
+            URLQueryItem(name: "affixes", value: affixes)
+        ]
+        
+        urlComponents.queryItems = urlItems
+        
+        guard let url = urlComponents.url else {
+            DispatchQueue.main.async {
+                completion(nil)
+            }
+            return
+        }
+        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.httpMethod = "GET"
+
+        URLSession.shared.dataTask(with: urlRequest) { data, reponse, error in
+            
+            guard let data = data, error == nil else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+                return
+            }
 
             
+           // let character = try! JSONDecoder().decode( from: data)
+//            DispatchQueue.main.async {
+//                completion()
+//
+//            }
+            
         }.resume()
-        
-        
     }
     
 }

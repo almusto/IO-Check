@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA2A2C29248FD95500EA7B7A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2A2C28248FD95500EA7B7A /* HomeView.swift */; };
+		AA2A2C2B248FF3AA00EA7B7A /* DungeonVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2A2C2A248FF3AA00EA7B7A /* DungeonVM.swift */; };
 		AA34AE1C2485803400B8CD53 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34AE1B2485803400B8CD53 /* Character.swift */; };
 		AA34AE1E2485866E00B8CD53 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34AE1D2485866E00B8CD53 /* Item.swift */; };
 		AA34AE202485884700B8CD53 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34AE1F2485884700B8CD53 /* Season.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA2A2C28248FD95500EA7B7A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AA2A2C2A248FF3AA00EA7B7A /* DungeonVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonVM.swift; sourceTree = "<group>"; };
 		AA34AE1B2485803400B8CD53 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		AA34AE1D2485866E00B8CD53 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AA34AE1F2485884700B8CD53 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
@@ -117,6 +121,7 @@
 				AA3907092486A4C100AA3E5B /* ImageView.swift */,
 				AA3907112489354000AA3E5B /* CharacterHeaderView.swift */,
 				AA3907152489365400AA3E5B /* RunListView.swift */,
+				AA2A2C28248FD95500EA7B7A /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				AA39070324869C6600AA3E5B /* CharacterVM.swift */,
+				AA2A2C2A248FF3AA00EA7B7A /* DungeonVM.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -365,9 +371,11 @@
 				AA34AE2624858DEB00B8CD53 /* Rank.swift in Sources */,
 				AA34AE202485884700B8CD53 /* Season.swift in Sources */,
 				AA3907122489354000AA3E5B /* CharacterHeaderView.swift in Sources */,
+				AA2A2C29248FD95500EA7B7A /* HomeView.swift in Sources */,
 				AA3907022486905700AA3E5B /* Webservice.swift in Sources */,
 				AA34AE1C2485803400B8CD53 /* Character.swift in Sources */,
 				AA39070A2486A4C100AA3E5B /* ImageView.swift in Sources */,
+				AA2A2C2B248FF3AA00EA7B7A /* DungeonVM.swift in Sources */,
 				AA3907182489377800AA3E5B /* Dungeon.swift in Sources */,
 				AA3907082486A46400AA3E5B /* ImageLoader.swift in Sources */,
 			);
